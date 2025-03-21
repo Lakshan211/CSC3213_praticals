@@ -12,16 +12,16 @@ m db 3
 
 start:
 mov ax,@data
-mov ds,ax  ;data secment register
+mov ds,ax  
 
 
 
 mov dl,n ;d1=7
 sub dl,m ;d1=7-3=4
-add dl,48  ;d1=4+48=53   convert to ASCII
+add dl,48  ;d1=4+48=52  
 
 
-mov ah,02h      ;int:-02h,string :-09h
+mov ah,02h      
 int 21h
 
 mov ax,4c00h
